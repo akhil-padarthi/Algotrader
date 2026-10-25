@@ -1,0 +1,4 @@
+-r requirements.txt
+pytest>=8            # optional: the suite is plain unittest, pytest also runs it
+playwright>=1.45     # browser end-to-end test (then: playwright install chromium)
+matplotlib>=3.8      # ships the real GOOG price sample used by the real-data test

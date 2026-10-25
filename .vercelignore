@@ -1,0 +1,23 @@
+# What `vercel deploy` uploads: everything at the top level is ignored, then only the site's files are
+# allowed back. Secrets (.env), local data, the virtual environment and tests are never uploaded.
+/*
+!app.py
+!vercel.json
+!requirements.txt
+!.python-version
+!backend
+!frontend
+
+# backend: only the code and the trained model (train it on your computer before deploying)
+backend/*
+!backend/algotrader
+!backend/models
+
+# frontend: only the built dashboard
+frontend/*
+!frontend/dist
+frontend/dist/**/*.map
+
+**/__pycache__
+**/*.pyc
+**/.env

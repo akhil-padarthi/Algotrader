@@ -1,0 +1,13 @@
+# Runtime dependencies (tested with: pandas 3.0.5, numpy 2.5.3, scikit-learn 1.9.1,
+# Flask 3.1.3, requests 2.34.2, joblib 1.6.0, python-dotenv 1.2.3, cryptography 50.0.1, psycopg 3.3.6 on Python 3.13)
+pandas>=2.2,<4
+numpy>=1.26,<3
+scikit-learn>=1.4,<2
+joblib>=1.3
+requests>=2.31,<3
+flask>=3.0,<4
+python-dotenv>=1.0
+cryptography>=42          # encrypts the Alpaca keys people save with their account
+psycopg[binary]>=3.2       # PostgreSQL / Supabase, used when DATABASE_URL is set
+tzdata                      # time zones on Windows / slim images
+gunicorn>=22; platform_system != "Windows"   # production web server (Linux/macOS)

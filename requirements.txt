@@ -1,0 +1,12 @@
+# Vercel installs these (it reads requirements.txt at the project root). Same as backend/requirements.txt,
+# minus gunicorn (Vercel runs the app itself). A test keeps the two lists in step.
+pandas>=2.2,<4
+numpy>=1.26,<3
+scikit-learn>=1.4,<2
+joblib>=1.3
+requests>=2.31,<3
+flask>=3.0,<4
+python-dotenv>=1.0
+cryptography>=42
+psycopg[binary]>=3.2
+tzdata

@@ -1,0 +1,20 @@
+# secrets
+.env
+backend/.env
+
+# generated
+backend/data/
+backend/models/
+frontend/dist/
+frontend/node_modules
+__pycache__/
+*.pyc
+*.db
+*.db-wal
+*.db-shm
+.venv/
+venv/
+.DS_Store
+
+# Vercel CLI link folder
+.vercel

@@ -1,0 +1,15 @@
+services:
+  algotrader:
+    build: .
+    env_file: backend/.env
+    environment:
+      DATA_DIR: /data
+      MODEL_DIR: /data/models
+    ports:
+      - "8000:8000"
+    volumes:
+      - algotrader-data:/data
+    restart: unless-stopped
+
+volumes:
+  algotrader-data:
